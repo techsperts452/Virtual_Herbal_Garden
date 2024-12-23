@@ -1,0 +1,293 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Virtual Herbal Garden</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <header class="header">
+        <h1>Virtual Herbal Garden 🌿</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#plants">Plants</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search plants..." />
+          <button class="btn" onclick="searchPlants()">Search</button>
+        </div>
+      </header>
+
+      <main>
+        <!-- About Section -->
+        <section id="about" class="section about">
+          <div class="content">
+            <h2>Welcome to the Virtual Herbal Garden</h2>
+            <p>
+              Discover a serene world of medicinal plants, their benefits, and how they contribute to wellness in traditional AYUSH practices.
+            </p>
+          </div>
+        </section>
+
+        <!-- Plants Section -->
+        <section id="plants" class="section plants">
+          <h2>Medicinal Plants</h2>
+          <div class="plant-cards">
+            <!-- Plant Cards -->
+            <div class="plant-card">
+              <img src="assets/images/tulsi.jpg" alt="Tulsi">
+              <h3>Tulsi (Holy Basil)</h3>
+              <p>Boosts immunity and supports respiratory health.</p>
+              <button class="btn" onclick="viewDetails('tulsi')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/aloevera.jpg" alt="Aloe Vera">
+              <h3>Aloe Vera</h3>
+              <p>Known for skin care and digestive health.</p>
+              <button class="btn" onclick="viewDetails('aloevera')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/neem.jpg" alt="Neem">
+              <h3>Neem</h3>
+              <p>Antibacterial and antifungal properties for skin and hair care.</p>
+              <button class="btn" onclick="viewDetails('neem')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/ashwagandha.jpg" alt="Ashwagandha">
+              <h3>Ashwagandha</h3>
+              <p>Reduces stress and improves energy and focus.</p>
+              <button class="btn" onclick="viewDetails('ashwagandha')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/turmeric.jpg" alt="Turmeric">
+              <h3>Turmeric</h3>
+              <p>Anti-inflammatory and supports joint health.</p>
+              <button class="btn" onclick="viewDetails('turmeric')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/brahmi.jpg" alt="Brahmi">
+              <h3>Brahmi</h3>
+              <p>Enhances memory and cognitive abilities.</p>
+              <button class="btn" onclick="viewDetails('brahmi')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/amla.jpg" alt="Amla">
+              <h3>Amla (Indian Gooseberry)</h3>
+              <p>Rich in Vitamin C, boosts immunity, and supports hair growth.</p>
+              <button class="btn" onclick="viewDetails('amla')">Learn More</button>
+            </div>
+            <!-- Added Plants -->
+            <div class="plant-card">
+              <img src="assets/images/ginger.jpg" alt="Ginger">
+              <h3>Ginger (Zingiber officinale)</h3>
+              <p>Good for digestion, nausea, and inflammation.</p>
+              <button class="btn" onclick="viewDetails('ginger')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/garlic.jpg" alt="Garlic">
+              <h3>Garlic (Allium sativum)</h3>
+              <p>Known for boosting immunity and reducing blood pressure.</p>
+              <button class="btn" onclick="viewDetails('garlic')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/chamomile.jpg" alt="Chamomile">
+              <h3>Chamomile (Matricaria chamomilla)</h3>
+              <p>Helps with sleep, digestion, and stress relief.</p>
+              <button class="btn" onclick="viewDetails('chamomile')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/lavender.jpg" alt="Lavender">
+              <h3>Lavender (Lavandula angustifolia)</h3>
+              <p>Relieves anxiety, stress, and improves sleep.</p>
+              <button class="btn" onclick="viewDetails('lavender')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/peppermint.jpg" alt="Peppermint">
+              <h3>Peppermint (Mentha piperita)</h3>
+              <p>Helps with digestion, headaches, and nausea.</p>
+              <button class="btn" onclick="viewDetails('peppermint')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/echinacea.jpg" alt="Echinacea">
+              <h3>Echinacea (Echinacea purpurea)</h3>
+              <p>Boosts the immune system and helps fight infections.</p>
+              <button class="btn" onclick="viewDetails('echinacea')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/cinnamon.jpg" alt="Cinnamon">
+              <h3>Cinnamon (Cinnamomum verum)</h3>
+              <p>Regulates blood sugar levels and helps with digestion.</p>
+              <button class="btn" onclick="viewDetails('cinnamon')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/stjohns.jpg" alt="St. John's Wort">
+              <h3>St. John's Wort (Hypericum perforatum)</h3>
+              <p>Used for treating depression and anxiety.</p>
+              <button class="btn" onclick="viewDetails('stjohns')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/milkthistle.jpg" alt="Milk Thistle">
+              <h3>Milk Thistle (Silybum marianum)</h3>
+              <p>Supports liver health and detoxification.</p>
+              <button class="btn" onclick="viewDetails('milkthistle')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/fenugreek.jpg" alt="Fenugreek">
+              <h3>Fenugreek (Trigonella foenum-graecum)</h3>
+              <p>Helps with digestion, blood sugar, and inflammation.</p>
+              <button class="btn" onclick="viewDetails('fenugreek')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/ginseng.jpg" alt="Ginseng">
+              <h3>Ginseng (Panax ginseng)</h3>
+              <p>Enhances energy, reduces stress, and improves cognitive function.</p>
+              <button class="btn" onclick="viewDetails('ginseng')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/dandelion.jpg" alt="Dandelion">
+              <h3>Dandelion (Taraxacum officinale)</h3>
+              <p>Good for liver health and detoxification.</p>
+              <button class="btn" onclick="viewDetails('dandelion')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/yarrow.jpg" alt="Yarrow">
+              <h3>Yarrow (Achillea millefolium)</h3>
+              <p>Used for wound healing, reducing inflammation, and fever.</p>
+              <button class="btn" onclick="viewDetails('yarrow')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/catnip.jpg" alt="Catnip">
+              <h3>Catnip (Nepeta cataria)</h3>
+              <p>Helps with anxiety, digestive issues, and insomnia.</p>
+              <button class="btn" onclick="viewDetails('catnip')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/lemonbalm.jpg" alt="Lemon Balm">
+              <h3>Lemon Balm (Melissa officinalis)</h3>
+              <p>Relieves stress, anxiety, and digestive discomfort.</p>
+              <button class="btn" onclick="viewDetails('lemonbalm')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/hibiscus.jpg" alt="Hibiscus">
+              <h3>Hibiscus (Hibiscus sabdariffa)</h3>
+              <p>Supports heart health and lowers blood pressure.</p>
+              <button class="btn" onclick="viewDetails('hibiscus')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/calendula.jpg" alt="Calendula">
+              <h3>Calendula (Calendula officinalis)</h3>
+              <p>Used topically for wound healing and reducing inflammation.</p>
+              <button class="btn" onclick="viewDetails('calendula')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/clove.jpg" alt="Clove">
+              <h3>Clove (Syzygium aromaticum)</h3>
+              <p>Known for its antibacterial, antiviral, and antifungal properties.</p>
+              <button class="btn" onclick="viewDetails('clove')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/cayenne.jpg" alt="Cayenne Pepper">
+              <h3>Cayenne Pepper (Capsicum annuum)</h3>
+              <p>Boosts metabolism and helps with pain relief.</p>
+              <button class="btn" onclick="viewDetails('cayenne')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/thyme.jpg" alt="Thyme">
+              <h3>Thyme (Thymus vulgaris)</h3>
+              <p>Supports respiratory health and fights infections.</p>
+              <button class="btn" onclick="viewDetails('thyme')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/rosemary.jpg" alt="Rosemary">
+              <h3>Rosemary (Rosmarinus officinalis)</h3>
+              <p>Improves memory, circulation, and reduces muscle pain.</p>
+              <button class="btn" onclick="viewDetails('rosemary')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/sage.jpg" alt="Sage">
+              <h3>Sage (Salvia officinalis)</h3>
+              <p>Known for its digestive and antimicrobial benefits.</p>
+              <button class="btn" onclick="viewDetails('sage')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/licorice.jpg" alt="Licorice Root">
+              <h3>Licorice Root (Glycyrrhiza glabra)</h3>
+              <p>Used for soothing the digestive tract and respiratory issues.</p>
+              <button class="btn" onclick="viewDetails('licorice')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/burdock.jpg" alt="Burdock Root">
+              <h3>Burdock Root (Arctium lappa)</h3>
+              <p>Detoxifies the body and supports skin health.</p>
+              <button class="btn" onclick="viewDetails('burdock')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/moringa.jpg" alt="Moringa">
+              <h3>Moringa (Moringa oleifera)</h3>
+              <p>Rich in vitamins and minerals, boosts energy and supports metabolism.</p>
+              <button class="btn" onclick="viewDetails('moringa')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/cranberry.jpg" alt="Cranberry">
+              <h3>Cranberry (Vaccinium macrocarpon)</h3>
+              <p>Prevents urinary tract infections and supports kidney health.</p>
+              <button class="btn" onclick="viewDetails('cranberry')">Learn More</button>
+            </div>
+            <div class="plant-card">
+              <img src="assets/images/oliveleaf.jpg" alt="Olive Leaf">
+              <h3>Olive Leaf (Olea europaea)</h3>
+              <p>Known for its antimicrobial and antiviral properties.</p>
+              <button class="btn" onclick="viewDetails('oliveleaf')">Learn More</button>
+            </div>
+          </div>
+          <div id="pagination" class="pagination"></div>
+        </section>
+
+        <!-- Virtual Tours Section -->
+        <section id="tours" class="section tours">
+          <h2>Virtual Tours</h2>
+          <p>Explore plants grouped by specific health benefits through our themed tours!</p>
+          <div class="tour-options">
+            <button class="btn tour-btn" onclick="startTour('immunity')">Immunity Boosters</button>
+            <button class="btn tour-btn" onclick="startTour('skin')">Skin Care Essentials</button>
+            <button class="btn tour-btn" onclick="startTour('stress')">Stress Relief</button>
+          </div>
+        </section>
+
+        <!-- Modal for Virtual Tours -->
+        <div id="tourModal" class="modal">
+          <div id="modalContent" class="modal-content">
+            <!-- Dynamic content will be injected here by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+          <h2>Contact Us</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2024 Virtual Herbal Garden | Designed with 🌱</p>
+      </footer>
+
+      <script src="script.js"></script>
+    </body>
+    </html>
